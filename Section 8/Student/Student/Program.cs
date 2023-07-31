@@ -1,0 +1,87 @@
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace student
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                string path = "F:\\main project\\Section 8\\";
+                Console.WriteLine("Enter file name to read out from:");
+                string fName = Console.ReadLine();
+                string fpath = path + fName;
+
+                if (File.Exists(fpath))
+                {
+                    string[] lines = File.ReadAllLines(fpath);
+
+                    List<Student> students = new List<Student>();
+                    foreach (string line in lines)
+                    {
+                        string[] data = line.Split(',');
+                        if (data.Length == 2)
+                        {
+                            students.Add(new Student
+                            {
+                                Name = data[0].Trim(),
+                                Class = data[1].Trim()
+                            });
+                        }
+                    }
+                    Console.WriteLine(" ");
+                    Console.WriteLine("All Students:");
+                    DisplayStudents(students);
+
+                    students.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.Ordinal));
+
+                    Console.WriteLine("\nStudents sorted by Name:");
+                    DisplayStudents(students);
+
+                    Console.WriteLine("\nEnter a student name to search:");
+                    string searchName = Console.ReadLine().Trim();
+                    Console.WriteLine(" ");
+                    Student foundStudent = students.Find(student => student.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase));
+                    if (foundStudent != null)
+                    {
+                        Console.WriteLine($"Student found - Name: {foundStudent.Name}, Class: {foundStudent.Class}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Student not found.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("File does not exist");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error!! " + ex.Message);
+            }
+            finally
+            {
+                Console.ReadKey();
+            }
+        }
+
+        class Student
+        {
+            public string Name { get; set; }
+            public string Class { get; set; }
+        }
+
+        static void DisplayStudents(List<Student> students)
+        {
+            foreach (var student in students)
+            {
+                Console.WriteLine($"Name: {student.Name}, Class: {student.Class}");
+            }
+        }
+    }
+}

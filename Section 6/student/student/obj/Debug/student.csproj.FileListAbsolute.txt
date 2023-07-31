@@ -1,0 +1,8 @@
+F:\main project\student\student\bin\Debug\student.exe.config
+F:\main project\student\student\bin\Debug\student.exe
+F:\main project\student\student\bin\Debug\student.pdb
+F:\main project\student\student\obj\Debug\student.csproj.AssemblyReference.cache
+F:\main project\student\student\obj\Debug\student.csproj.SuggestedBindingRedirects.cache
+F:\main project\student\student\obj\Debug\student.csproj.CoreCompileInputs.cache
+F:\main project\student\student\obj\Debug\student.exe
+F:\main project\student\student\obj\Debug\student.pdb

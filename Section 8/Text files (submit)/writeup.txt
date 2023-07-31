@@ -1,0 +1,15 @@
+INTRODUCTION:
+A simple console application that reads student data from a file, allows the user to search for a student by name, and then displays the list of students both in their original order and sorted by name.
+
+EXPLANATION:
+The program prompts the user to enter the name of the file from which student data will be read.
+It reads the content of the file located at the specified path.
+After reading all the data, the program displays the list of all students as it was read from the file.
+It then sorts the list of students based on their names in ascending order.
+The program prompts the user to enter a student name to search for in the list.
+It performs a case-insensitive search on the list for the student with the specified name.
+If the student is found, it displays their name and class; otherwise, it shows a message indicating that the student was not found.
+Any exceptions that occur during the execution of the program are caught and handled, displaying an error message.
+The Console.ReadKey() method waits for a key press before closing the console window, allowing the user to see the results.
+
+GitHub Link: https://github.com/KKaviya1/MainProject/tree/master/Section%208

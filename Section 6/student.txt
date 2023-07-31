@@ -1,0 +1,9 @@
+Student ID: 123
+Student Name:Viya
+Age:22
+Gender:Female
+Grade:B
+E-mail:viya123@gmail.com
+Phone number:98563 41275
+Address:No:34,White town,Pondicherry.
+Pincode:605009

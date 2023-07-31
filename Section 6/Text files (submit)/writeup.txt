@@ -1,0 +1,15 @@
+INTRODUCTION:
+A simple file reader application that allows users to input a file name and read its contents. 
+The program prompts the user to enter a file name, and if the file exists in the specified directory, it reads and displays the contents of the file on the console. 
+
+EXPLANATION:
+The program starts by defining the path where the files are located. 
+The program prompts the user to enter the name of the file they want to read from, and the input is stored in the fileName variable.
+The Path.Combine() method is used to combine the specified path and file name into the filePath.
+The program checks if the file exists using File.Exists() method. If the file exists, it proceeds to read the file using File.ReadAllLines(), which reads all lines of the file and stores them in the lines array.
+The program then loops through each line in the lines array and displays its content on the console using Console.WriteLine().
+If the file does not exist, the program informs the user that the file does not exist.
+If any exception occurs during the execution of the code (e.g., file not found, permission issues, etc.), it will be caught in the catch block, and an appropriate error message will be displayed.
+The finally block ensures that the program waits for the user to press any key before closing the console window, allowing them to read the displayed content before exiting the application.
+
+GitHub Link: https://github.com/KKaviya1/MainProject

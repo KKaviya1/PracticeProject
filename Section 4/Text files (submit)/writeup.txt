@@ -1,0 +1,22 @@
+Step 1: Set Up Angular Application
+-----------------------------------
+Create a new Angular application using the Angular CLI.
+Navigate to the newly created project directory.
+
+Step 2: Develop the Angular Application
+----------------------------------------
+Place your HTML content in the app.component.html file located in the src/app/ directory.
+
+Step 3: Git Repository
+---------------------------------
+Open a terminal or command prompt in the root directory of your Angular project.
+Initialize a new Git repository.
+Add all the changes in your project to the staging area.
+Commit the changes.
+Create a GitHub Repository.
+Add Remote Origin.
+Push to GitHub.
+
+
+GitHub Link: 
+Output Link: http://localhost:4200/
