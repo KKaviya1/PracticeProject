@@ -1,0 +1,40 @@
+Design Overview:
+----------------
+
+Student class:
+The Student class represents a student in the school and has two properties (Name and ClassAndSection) These properties store the name of the student and the class and section the student belongs to, respectively.
+
+Teacher class:
+The Teacher class represents a teacher in the school and has two properties (Name and ClassAndSection) These properties store the name of the teacher and the class and section the teacher is associated with, respectively.
+
+Subject class:
+The Subject class represents a subject offered in the school and has three properties (Name, SubjectCode, and Teacher) The Name property stores the name of the subject, the SubjectCode property stores a unique identifier for the subject, and the Teacher property references the teacher who teaches the subject.
+
+DataStorage class:
+The DataStorage class is designed as a Singleton to ensure that there is only one instance of the data storage throughout the application. 
+It contains three lists (Students, Teachers, and Subjects) which are used to store instances of Student, Teacher, and Subject objects, respectively. 
+The class follows the Singleton pattern by having a private constructor and a static method GetInstance() that returns the single instance of the class. 
+
+
+Main Function:
+--------------
+
+The Main() function serves as the entry point of the Console application. 
+Inside this function, we perform the following tasks:
+
+Create the DataStorage instance:
+We create an instance of the DataStorage class using the GetInstance() method to ensure that we work with the same data storage throughout the application.
+
+Fill up the lists with dummy data:
+We use the class to create instances of students, teachers, and subjects and add them to their respective lists in the DataStorage instance.
+
+Display students in a class:
+We iterate through the Students list in the DataStorage instance and filter out students belonging to a specific class and section. 
+We then display the names of these students.
+
+Display subjects taught by a teacher:
+We iterate through the Subjects list in the DataStorage instance and filter out subjects taught by a specific teacher. 
+We then display the names of these subjects.
+
+
+GitHub Link:
